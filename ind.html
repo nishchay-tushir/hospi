@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Hosptial</title>
+
+    
+    <link rel="stylesheet" href="ind.css">
+</head>
+<body>
+    <section class="mob">
+
+        <div class="loading-screen" id="loadingScreen">
+            <img src="imgs/logo.jpg" alt="Loading Screen Image">
+        </div>
+
+        <section class="mheader">
+            <img src="imgs/logo.jpg" alt="">
+            <a href="https://example.com" class="button"><img src="imgs/map.png" alt="Button Image"></a>
+            <a href="tel:+1234567890" class="button"><img src="imgs/call.png" alt="Phone Icon"></a>
+
+        </section>
+
+        <section class="mnav">
+            <a href="https://example.com"><img src="imgs/spec.png" alt=""></a>
+            <a href="https://example.com"><img src="imgs/ins.png" alt=""></a>
+            <a href="https://example.com"><img src="imgs/appoint.png" alt="" id="appoint"></a>
+            <a href="https://example.com"><img src="imgs/review.png" alt=""></a>
+            <a href="https://example.com"><img src="imgs/about.png" alt=""></a>
+        </section>
+
+        <section class="mfirst">
+
+          
+        </section>
+
+        <section class="msecond">
+          <div class="maina">
+            <h2 class="get">Offering complete patient care</h2>  
+            <p>Everyone deserves to have their medical needs met end-to-end. With this in mind, Jupiter Hospital has Asia’s Finest Neuro Rehabilitation Centre in Thane, as well as a centre in Indore, to care for individuals who require extensive care to recover from injuries of various kinds.</p>
+            <img src="imgs/mission.jpg" alt=""> 
+          </div>              
+        </section>
+
+        <section class="third">
+          <div class="person">
+            <img src="imgs/miss.jpg" alt="">
+            <div class="mcon">
+              <h2>Our Mission</h2>
+              <h3>Wisdom Superspeciality Hospital is committed to maintain the highest standard of care and respond to
+                the needs of the community in a compassionate manner. To provide state-of-the-art, high quality and 
+                cost-effective healthcare services and latest information to improve and maintain health for the 
+                well-being of the community. To unrelentingly pursue the creation of value for our customers, 
+                shareholders, employees and society at large. To foster a therapeutic relationship based on compassion 
+                that is felt, quality that is measurable and cost that is affordable. To become partners in health 
+                promotion with every section of society.</h3>
+            </div>
+          </div>
+        </section>
+        
+
+    </section>
+</body>
+</html>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.getElementById("loadingScreen");
+  
+    // Simulate a delay to demonstrate the effect (replace with your actual content loading logic)
+    setTimeout(function () {
+        loadingScreen.style.opacity = "0";
+        loadingScreen.style.transform = "scale(8)";
+        setTimeout(function () {
+            loadingScreen.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling after loading screen disappears
+        }, 500);
+    }, 800); // Adjust the timeout (in milliseconds) to match your desired delay
+    });    
+
+
+const scrollBox = document.querySelector('.person');
+const main = document.querySelector('.maina');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition >= 50 && scrollPosition < 300) {
+    main.style.display = 'grid';
+  }else if (scrollPosition >= 300) {
+    scrollBox.style.display = 'grid';
+  }else {
+    scrollBox.style.display = 'none';
+    main.style.display = 'none';
+  }
+});
+</script>
+
